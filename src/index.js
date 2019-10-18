@@ -9,6 +9,9 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+      if (knowsProgramming)
+        return Math.ceil(800 / config[focus]); // if student knows programming it takes 800 hours to learn JS
+      else
+        return Math.ceil(1300 / config[focus]); // if student does not know programming it takes 500 hours more
   };
   
